@@ -1,0 +1,9 @@
+services:
+  donobox:
+    build: .
+    restart: unless-stopped
+    environment:
+      STEAM_PASSWORD: ${STEAM_PASSWORD:?set STEAM_PASSWORD in .env}
+    volumes:
+      - ./76561198190632399.maFile:/config/account.maFile:ro
+    # command: ["-interval", "1m"]

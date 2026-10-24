@@ -1,0 +1,4 @@
+*.maFile
+.env
+.git
+donobox
